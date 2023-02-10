@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Desktop Computer",
+    "price": 799.99,
+    "imgUrl": "/imgs/desktop-computer.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Graphics card",
+    "price": 299.8,
+    "imgUrl": "/imgs/graphics-card.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Processor",
+    "price": 149.99,
+    "imgUrl": "/imgs/processor.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Hard drive",
+    "price": 50.5,
+    "imgUrl": "/imgs/hard-drive.jpg"
+  }
+]
