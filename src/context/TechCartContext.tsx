@@ -35,7 +35,7 @@ export function TechCartProvider({ children }: TechCartProviderProps) {
   const cartQuantity = cartItems.reduce((quantity,item) => item.quantity + quantity, 0)
 
   const openCart = () => setIsOpen(true);
-  const closeCart = () => setIsOpen(true);
+  const closeCart = () => setIsOpen(false);
 
   function getItemQuantity(id: number) {
     return cartItems.find((item) => item.id === id)?.quantity || 0;
