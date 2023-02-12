@@ -18,6 +18,13 @@ export function CartItem({ id, quantity }: CartItemProps) {
         src={item.imgUrl}
         style={{ width: "125px", height: "75px", objectFit: "cover" }}
       />
+      <div>
+        <div>
+            {item.name} {quantity > 1 ?
+            <span className="text-muted" style={{fontSize: '0.65rem'}}>x{quantity}</span> :
+            null}
+        </div>
+      </div>
     </Stack>
   );
 }
