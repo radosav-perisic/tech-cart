@@ -1,5 +1,6 @@
 import { createContext, useContext, ReactNode, useState } from "react";
 import { isHtmlElement } from "react-router-dom/dist/dom";
+import { TechCart } from "../components/TechCart";
 
 type TechCartProviderProps = {
   children: ReactNode;
@@ -91,6 +92,7 @@ export function TechCartProvider({ children }: TechCartProviderProps) {
       }}
     >
       {children}
+      <TechCart isOpen={isOpen}/>
     </TechCartContext.Provider>
   );
 }
