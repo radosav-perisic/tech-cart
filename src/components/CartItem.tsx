@@ -1,6 +1,7 @@
 import { Stack } from "react-bootstrap";
 import { useTechCart } from "../context/TechCartContext";
 import storeItems from "../data/items.json";
+import { formatCurrency } from "../utilities/formatCurrency";
 
 type CartItemProps = {
   id: number;
@@ -18,12 +19,16 @@ export function CartItem({ id, quantity }: CartItemProps) {
         src={item.imgUrl}
         style={{ width: "125px", height: "75px", objectFit: "cover" }}
       />
-      <div>
+      <div className="me-auto">
         <div>
-            {item.name} {quantity > 1 ?
-            <span className="text-muted" style={{fontSize: '0.65rem'}}>x{quantity}</span> :
-            null}
+          {item.name}{" "}
+          {quantity > 1 ? (
+            <span className="text-muted" style={{ fontSize: "0.65rem" }}>
+              x{quantity}
+            </span>
+          ) : null}
         </div>
+        <div className="text-muted" style={{fontSize: '0.75rem'}}>{formatCurrency(item.price)}</div>
       </div>
     </Stack>
   );
