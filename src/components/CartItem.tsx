@@ -28,7 +28,9 @@ export function CartItem({ id, quantity }: CartItemProps) {
             </span>
           ) : null}
         </div>
-        <div className="text-muted" style={{fontSize: '0.75rem'}}>{formatCurrency(item.price)}</div>
+        <div className="text-muted" style={{ fontSize: "0.75rem" }}>
+          {formatCurrency(item.price)}
+        </div>
       </div>
     </Stack>
   );
