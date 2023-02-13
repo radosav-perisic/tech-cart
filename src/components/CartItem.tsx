@@ -1,4 +1,4 @@
-import { Stack } from "react-bootstrap";
+import { Button, Stack } from "react-bootstrap";
 import { useTechCart } from "../context/TechCartContext";
 import storeItems from "../data/items.json";
 import { formatCurrency } from "../utilities/formatCurrency";
@@ -31,6 +31,9 @@ export function CartItem({ id, quantity }: CartItemProps) {
         <div className="text-muted" style={{ fontSize: "0.75rem" }}>
           {formatCurrency(item.price)}
         </div>
+      </div>
+      <div>{formatCurrency(item.price * quantity)}
+      <Button variant='outline-danger' size='sm' onClick={() => removeFromCart(item.id)}>&times;</Button>
       </div>
     </Stack>
   );
