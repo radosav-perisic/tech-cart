@@ -1,6 +1,7 @@
 import { createContext, useContext, ReactNode, useState } from "react";
 import { isHtmlElement } from "react-router-dom/dist/dom";
 import { TechCart } from "../components/TechCart";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 type TechCartProviderProps = {
   children: ReactNode;
@@ -30,7 +31,7 @@ export function useTechCart() {
 
 export function TechCartProvider({ children }: TechCartProviderProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [cartItems, setCartItems] = useLocalStorage<CartItem[]>('shopping-cart',[]);
 
   const cartQuantity = cartItems.reduce((quantity,item) => item.quantity + quantity, 0)
 
