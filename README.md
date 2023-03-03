@@ -1,5 +1,5 @@
-# TechCart
-TechCart is a shopping cart application that helps users keep track of the tech products they want to purchase. With an intuitive and user-friendly interface, TechCart makes it easy for users to add, edit, and remove items from their cart.
+# The Gadget Cart
+The Gadget Cart is a shopping cart application that helps users keep track of the tech products they want to purchase. With an intuitive and user-friendly interface, The Gadget Cart makes it easy for users to add, edit, and remove items from their cart.
 
 ## Features
 * Add items to the cart
